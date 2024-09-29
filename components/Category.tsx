@@ -17,7 +17,7 @@ export const Category = ({ currentCategory }: { currentCategory: string }) => {
     <div>
       <select value={selected} onChange={handleOnChange}>
         {categoryList.map((category) => (
-          <option value={category}>
+          <option value={category} key={category}>
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </option>
         ))}
